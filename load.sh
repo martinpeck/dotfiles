@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source "$DOTFILES_FOLDER/aliases/load.sh"
 
 if (command -v git > /dev/null); then
