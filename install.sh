@@ -1,5 +1,8 @@
  #!/bin/bash
 
+echo "SHELL IS..."
+echo $SHELL
+
 BASE_DIR=$(dirname "$0")
 BASE_DIR=$(cd $BASE_DIR; pwd)
 
