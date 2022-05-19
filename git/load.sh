@@ -1,13 +1,13 @@
 #!/bin/bash
 
-
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-# set up global gitignore
-git config --global core.excludesfile "${script_dir}/.gitignore_global"
+cp "${script_dir}/.gitignore_global" ~/.gitignore_global
 
 # only set config outside of dev containers
 if [[ -z "${DEV_CONTAINER}" ]]; then
+
+    # set up global gitignore
+    git config --global core.excludesfile "~/.gitignore_global"
 
     git config --global --replace-all core.editor "code --wait"
 
