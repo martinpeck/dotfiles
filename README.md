@@ -5,9 +5,9 @@
 These user settings allow a VS Code Dev Container to automatically clone and use these dotfiles:
 
 ``` json
-"remote.containers.dotfiles.installCommand": "~/dotfiles/install-devcontainer.sh",
-"remote.containers.dotfiles.repository": "https://github.com/martinpeck/dotfiles",    
-"remote.containers.dotfiles.targetPath": "~/dotfiles"
+"dotfiles.installCommand": "~/dotfiles/install-devcontainer.sh",
+"dotfiles.repository": "https://github.com/martinpeck/dotfiles",    
+"dotfiles.targetPath": "~/dotfiles"
 ```
 
-See <https://code.visualstudio.com/docs/remote/containers#_personalizing-with-dotfile-repositories> for more details
+See <https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories> for more details
