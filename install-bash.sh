@@ -4,12 +4,11 @@ BASE_DIR=$(dirname "$0")
 BASE_DIR=$(cd $BASE_DIR; pwd)
 
 # setup .bashrc
-if grep -q DOTFILES_FOLDER ~/.bashrc; then
+if grep -q DOTFILES_START ~/.bashrc; then
     echo "dotfiles loader already in .bashrc - skipping"
 else
     echo "Adding dotfiles loader to .bashrc..."
     echo -e "# DOTFILES_START" >> ~/.bashrc
-    echo -e "DOTFILES_FOLDER=\"$BASE_DIR\"" >> ~/.bashrc
     if [[ -n $DEV_CONTAINER ]]; then
         echo -e "DEV_CONTAINER=1" >> ~/.bashrc
     fi
