@@ -22,8 +22,8 @@ if [[ $(command -v azbrowse > /dev/null; echo $?) == 1 ]]; then
     mkdir -p ~/bin
     export AZBROWSE_LATEST=$(wget -O - -q https://api.github.com/repos/lawrencegripper/azbrowse/releases/latest | grep 'browser_' | cut -d\" -f4 | grep linux_amd64.tar.gz)
     wget "$AZBROWSE_LATEST"
-    tar -C ~/bin -zxvf azbrowse_linux_amd64.tar.gz azbrowse
-    chmod +x ~/bin/azbrowse
+    tar -C /usr/bin -zxvf azbrowse_linux_amd64.tar.gz azbrowse
+    chmod +x /usr/bin/azbrowse
     rm azbrowse_linux_amd64.tar.gz
 fi
 
